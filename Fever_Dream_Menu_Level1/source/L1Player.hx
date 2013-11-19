@@ -15,8 +15,9 @@ class L1Player extends FlxSprite{
 
 	public function new(xPosition:Float, yPosition:Float):Void {
 		super(xPosition, yPosition);
-		//COMMITTTTTTTTTTTTt
-		makeGraphic(32, 64, 0xFFFF0000);
+		loadGraphic("assets/L1Player.png", true, true, 157, 181);
+		addAnimation("idle", [0], 10);
+		addAnimation("walk", [2, 6, 7, 8, 2, 9, 10, 11], 10);
 		powerUpCounter = 0;
 		powerUpTimeLimit = 1;
 		jumpVelocity = -320;
@@ -50,9 +51,11 @@ class L1Player extends FlxSprite{
 		// movement
 		if (FlxG.keys.LEFT == true){
 			velocity.x = -160;
+			play("walk");
 		}
 		if (FlxG.keys.RIGHT == true){
 			velocity.x = 160;
+			play("walk");
 		}
 
 		// exit condition
