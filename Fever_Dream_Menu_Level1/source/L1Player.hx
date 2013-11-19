@@ -15,6 +15,7 @@ class L1Player extends FlxSprite{
 
 	public function new(xPosition:Float, yPosition:Float):Void {
 		super(xPosition, yPosition);
+		//COMMITTTTTTTTTTTTt
 		makeGraphic(32, 64, 0xFFFF0000);
 		powerUpCounter = 0;
 		powerUpTimeLimit = 1;
