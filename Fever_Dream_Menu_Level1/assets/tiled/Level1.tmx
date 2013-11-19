@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="25" height="200" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tilemap_test" tilewidth="32" tileheight="32">
+  <image source="tilemap_test.png" width="512" height="384"/>
+ </tileset>
+ <layer name="background" width="25" height="200">
+  <properties>
+   <property name="nocollide" value="true"/>
+   <property name="tileset" value="tilemap_test"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt0csJACAMRMGgWJGV2H8zdiDiB0TmMMfwAlsjol5WFs3e7jRekw7T0NDQ0Bg3MgAAAAAAAAAAAAAAAAAA32sP/IDNsTk2x+bYHGZ1eSJBgw==
+  </data>
+ </layer>
+ <layer name="foreground" width="25" height="200">
+  <properties>
+   <property name="tileset" value="tilemap_test"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt3LEJACAMRUFXsbFw/wHtJSARC8U7eGWq36cUAE7pQdytJtu55V32BAAAAAAAAAAAAAAAAAAAVtoUABDL/nr5uQFKkA6R
+  </data>
+ </layer>
+ <objectgroup name="player_start" width="25" height="200">
+  <object name="p1_start" type="player_start" x="96" y="6240" width="32" height="64"/>
+ </objectgroup>
+ <objectgroup name="exits" width="25" height="200">
+  <object name="exit1" type="exit" x="576" y="352" width="32" height="64"/>
+ </objectgroup>
+ <objectgroup name="consumables" width="25" height="200">
+  <object name="big jump 1" type="powerup" x="608" y="6272" width="32" height="32"/>
+  <object name="big jump 1" type="powerup" x="480" y="5664" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="enemies" width="25" height="200">
+  <object name="enemy1" type="enemy_start" x="32" y="544" width="32" height="32">
+   <properties>
+    <property name="speedX" value="32"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
